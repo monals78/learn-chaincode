@@ -253,7 +253,7 @@ func (t *SimpleChaincode) Invoke(stub shim.ChaincodeStubInterface, function stri
 				} else if  function == "distributor_to_distributor"			{ return t.distributor_to_distributor(stub, v, caller, caller_affiliation, args[0], DISTRIBUTOR)
 				} else if  function == "distributor_to_retailer"			{ return t.distributor_to_retailer(stub, v, caller, caller_affiliation, args[0], RETAILER)
 				} else if  function == "retailer_to_consumer"		{ return t.retailer_to_consumer(stub, v, caller, caller_affiliation, args[0], CONSUMER)
-				} else if  function == "private_to_scrap_merchant"	{ return t.private_to_scrap_merchant(stub, v, caller, caller_affiliation, args[0], "scrap_merchant")
+				} else if  function == "consumer_to_retailer"	{ return t.consumer_to_retailer(stub, v, caller, caller_affiliation, args[0], "scrap_merchant")
 				}
 
 		} else if function == "update_description"		{ return t.update_description(stub, v, caller, caller_affiliation, args[0])
